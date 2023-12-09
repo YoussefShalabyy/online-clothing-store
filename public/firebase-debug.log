@@ -1,0 +1,35 @@
+[debug] [2023-12-07T23:23:34.579Z] ----------------------------------------------------------------------
+[debug] [2023-12-07T23:23:34.583Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\EL-professer\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-12-07T23:23:34.584Z] CLI Version:   13.0.0
+[debug] [2023-12-07T23:23:34.584Z] Platform:      win32
+[debug] [2023-12-07T23:23:34.584Z] Node Version:  v20.10.0
+[debug] [2023-12-07T23:23:34.585Z] Time:          Fri Dec 08 2023 01:23:34 GMT+0200 (Eastern European Standard Time)
+[debug] [2023-12-07T23:23:34.585Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-07T23:23:34.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-07T23:23:34.831Z] > authorizing via signed-in user (ya8372116@gmail.com)
+[debug] [2023-12-07T23:23:34.831Z] [iam] checking project online-store-b3242 for permissions ["firebase.projects.get"]
+[debug] [2023-12-07T23:23:34.834Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-store-b3242:testIamPermissions [none]
+[debug] [2023-12-07T23:23:34.834Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-store-b3242:testIamPermissions x-goog-quota-user=projects/online-store-b3242
+[debug] [2023-12-07T23:23:34.834Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-store-b3242:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-07T23:23:35.702Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-store-b3242:testIamPermissions 200
+[debug] [2023-12-07T23:23:35.703Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-store-b3242:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-07T23:23:35.703Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242 [none]
+[debug] [2023-12-07T23:23:36.059Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242 200
+[debug] [2023-12-07T23:23:36.059Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242 {"projectId":"online-store-b3242","projectNumber":"104668966943","displayName":"Online Store","name":"projects/online-store-b3242","resources":{"hostingSite":"online-store-b3242"},"state":"ACTIVE","etag":"1_35c1e3b2-5b25-4331-90ad-0cedc19eaa62"}
+[info] 
+[info] === Serving from 'D:\'...
+[info] 
+[debug] [2023-12-07T23:23:36.071Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/online-store-b3242/sites 
+[debug] [2023-12-07T23:23:37.146Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/online-store-b3242/sites 200
+[debug] [2023-12-07T23:23:37.146Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/online-store-b3242/sites {"sites":[{"name":"projects/online-store-b3242/sites/online-store-b3242","defaultUrl":"https://online-store-b3242.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-07T23:23:37.147Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242/webApps/-/config [none]
+[debug] [2023-12-07T23:23:37.682Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242/webApps/-/config 200
+[debug] [2023-12-07T23:23:37.682Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242/webApps/-/config {"projectId":"online-store-b3242","storageBucket":"online-store-b3242.appspot.com","apiKey":"AIzaSyAnQz_e0bvIHRoldlxx_huIOSVY8U4o0Bk","authDomain":"online-store-b3242.firebaseapp.com","messagingSenderId":"104668966943"}
+[debug] [2023-12-07T23:23:37.696Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242 [none]
+[debug] [2023-12-07T23:23:37.900Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242 200
+[debug] [2023-12-07T23:23:37.900Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/online-store-b3242 {"projectId":"online-store-b3242","projectNumber":"104668966943","displayName":"Online Store","name":"projects/online-store-b3242","resources":{"hostingSite":"online-store-b3242"},"state":"ACTIVE","etag":"1_35c1e3b2-5b25-4331-90ad-0cedc19eaa62"}
+[info] i  hosting[online-store-b3242]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[online-store-b3242]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [07/Dec/2023:23:23:45 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [07/Dec/2023:23:23:45 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [07/Dec/2023:23:23:45 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [07/Dec/2023:23:23:45 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\""}}
