@@ -12,6 +12,7 @@ createRoutesFromElements,
 Route,
 RouterProvider,
 } from "react-router-dom";
+import CartPage from "./Pages/cartpage/CartPage";
 
 
 const router = createBrowserRouter(
@@ -24,6 +25,7 @@ createRoutesFromElements(
  <Route path="sign in" element={<SignIn />} />
  <Route path="sign up" element={<SignUp />} />
  <Route path="create" element={<Create/>} />
+ <Route path="cart" element={<CartPage/>} />
 
 </Route>
 )

@@ -16,7 +16,10 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from '@mui/material';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 
 
 const drawerWidth = 240;
@@ -83,19 +86,27 @@ function ResponsiveDrawer(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Online Clothing Store
-          </Typography>
+         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap component="div">
+              Online Clothing Store
+            </Typography>
+          </div>
+          <div>
+            {/* Add your shopping cart IconButton here */}
+            <IconButton color="inherit" aria-label="shopping cart" onClick={() => navigate('/cart')}>
+              <AddShoppingCartIcon />
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <Box

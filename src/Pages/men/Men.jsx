@@ -15,7 +15,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import  { useState } from 'react';
+import Cart from '../cart/Cart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -32,10 +35,20 @@ function Copyright() {
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function Album() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (item) => {
+  
+    setCartItems([...cartItems, item]);
+  };
+  const removeFromCart = (index) => {
+    const updatedCart = [...cartItems];
+    updatedCart.splice(index, 1);
+    setCartItems(updatedCart);
+  };
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -67,7 +80,9 @@ export default function Album() {
 
                   <CardActions >
                     {/* <Button size="small">View</Button> */}
-                    <Button size="small">Add to cart</Button>
+                    <Button size="small" onClick={() => addToCart(card)}
+                    >Add to cart </Button>
+                  
                   </CardActions>
                 </Card>
               </Grid>
@@ -90,7 +105,7 @@ export default function Album() {
         <Copyright />
       </Box>
       </main>
-      
+    
       {/* Footer */}
       {/*  */}
       {/* End footer */}
