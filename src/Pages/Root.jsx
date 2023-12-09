@@ -25,6 +25,7 @@ const Root = () => {
         mt: '64px', 
         display: "flex", 
         justifyContent: "center" 
+        , backgroundColor: '#d2d2d2'
       }}
       className="border"
     >

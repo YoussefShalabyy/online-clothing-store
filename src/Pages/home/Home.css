@@ -1,13 +1,30 @@
 .image{
-    height: 50%;
+    height: 80%;
     /* margin: 20px; */
     border-radius: 10%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
+    /* max-height: 400px; */
+    object-fit: cover;
   
 }
+.arrow-button {
+    margin: 0 10px; /* Adjust margin as needed */
+  }
 .div{
-    margin: 5%;
+    /* margin: 5%; */
+    /* display: flex; */
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.image-slider{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 20px; */
+   
 }
 .h1{
     font-size:4vw

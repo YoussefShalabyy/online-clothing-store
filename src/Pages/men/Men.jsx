@@ -20,6 +20,7 @@ import Cart from '../cart/Cart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -82,7 +83,6 @@ export default function Album() {
                     {/* <Button size="small">View</Button> */}
                     <Button size="small" onClick={() => addToCart(card)}
                     >Add to cart </Button>
-                  
                   </CardActions>
                 </Card>
               </Grid>

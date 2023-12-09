@@ -35,9 +35,9 @@ function ResponsiveDrawer(props) {
   };
 
   const drawer = (
-    <div>
+    <div  style={{}}>
       <Toolbar />
-      <Divider />
+      <Divider sx={{ backgroundColor: 'white' }} />
       <List>
         {['Home', 'Men', 'Women',].map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -53,7 +53,7 @@ function ResponsiveDrawer(props) {
           </ListItem>
         ))}
       </List>
-      <Divider />
+      <Divider sx={{ backgroundColor: 'white' }} />
       <List>
         {['Sign in', 'Sign up'].map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -83,7 +83,8 @@ function ResponsiveDrawer(props) {
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
+          ml: { sm: `${drawerWidth}px` }
+          , backgroundColor: '#fd9706', color: 'white',
         }}
       >
          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -111,7 +112,7 @@ function ResponsiveDrawer(props) {
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }   }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -134,7 +135,7 @@ function ResponsiveDrawer(props) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth , backgroundColor: '#2d2d2d', color: 'white' },
           }}
           open
         >
