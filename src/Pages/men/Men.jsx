@@ -39,7 +39,7 @@ export default function Album() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <main>
+      <main style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
         <Container sx={{ py: 8 }} maxWidth="md">
 
@@ -75,13 +75,9 @@ export default function Album() {
           </Grid>
         </Container>
 
-
-      </main>
-      
-      {/* Footer */}
-      {/* <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+<Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          
         </Typography>
         <Typography
           variant="subtitle1"
@@ -89,10 +85,14 @@ export default function Album() {
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+         
         </Typography>
         <Copyright />
-      </Box> */}
+      </Box>
+      </main>
+      
+      {/* Footer */}
+      {/*  */}
       {/* End footer */}
       
     </ThemeProvider>
